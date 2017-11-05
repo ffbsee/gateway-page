@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <title>Gateway Freifunk Bodensee</title>
+    <title>gw02.ffbsee.de</title>
     <meta name="language" content="de">
     <meta name="revisit-after" content="23 days">
     <meta name="author" content="Freifunk Bodensee Community">
@@ -18,10 +18,16 @@
       background: no-repeat center center,-ms-linear-gradient(top,     rgba(255,255,255,1), rgba(0,158,224,1));
       background: no-repeat center center,linear-gradient(top,         rgba(255,255,255,1), rgba(0,158,224,1));
       min-height: 99vh;
-      font-family: sans-serif;
     }
     img { width: 80%;}
-    h1 {color: blue;}
+    h1 {
+      color: blue;
+      font-size: 2.6em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 333px;
+}
     main a {
       display: flex;
       align-items: center;
@@ -33,12 +39,13 @@
       font-weight: 520;
       padding: 23px;
       margin: 4px;
-      margin-right: 8%;
-      margin-left: 8%;
       background: rgba(255,255,255,0.32);
+      margin-right: 100px;
+      margin-left: 100px;
       border-radius: 8px;
     }
     main a:hover {
+      color: aqua;
       background: rgba(255,255,255,0.5);
     } 
   </style>
@@ -48,6 +55,9 @@
         <img title="bodensee.freifunk.net" alt="bodensee.freifunk.net" src="https://freifunk-bodensee.net/lib/tpl/dokuwiki-template/images/logo.svg"/>
       </a>
     </header>
+    <h1>{{ hostname }}</h1>
+    <a style="color: blue; ">{{ hostname }} ist einer der "Gateways" des Freifunk Bodensee Netz. Zu diesen Gateway bauen die Freifunk-Router eine FastD-VPN Verbindung auf um sich mit dem Freifunk Netz zu verbinden. Eine passende Firmware dazu kann beim Firmware-Download gefunden werden. Eine Liste mit unterstützen Routern gibt es bei uns im Wiki.<br/>Wenn du Fragen zu Freifunk oder zur Freifunk Bodensee Community hast oder dich gerne bei uns beteiligen willst, dann findest du verschiedene Kontaktm&ouml;glichkeiten auf unserer Startseite.</a>
+    <br/><br/>
     <main>
       <a title="Zur Startseite von Freifunk Bodensee." href="https://freifunk-bodensee.net/start.html">Freifunk Startseite</a>
       <a title="Zum Freifunk Bodensee Wiki." href="https://freifunk-bodensee.net/doku.php?id=anleitungen:inhaltsverzeichnis">Zum Wiki</a>
