@@ -1,70 +1,65 @@
-<!Doctype HTML>
-<html lang="de">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <title>{{ hostname }}</title>
-    <meta name="language" content="de">
-    <meta name="revisit-after" content="23 days">
-    <meta name="author" content="Freifunk Bodensee Community">
-    <meta name="publisher" content="Freifunk Bodensee Community">
-  </head>
-  <style>
-    body {
-      background: rgba(0,158,224,1);
-      background: no-repeat center center,-moz-linear-gradient(top,    rgba(255,255,255,1), rgba(0,158,224,1));
-      background: no-repeat center center,-webkit-linear-gradient(top, rgba(255,255,255,1), rgba(0,158,224,1));
-      background: no-repeat center center,-o-linear-gradient(top,      rgba(255,255,255,1), rgba(0,158,224,1));
-      background: no-repeat center center,-ms-linear-gradient(top,     rgba(255,255,255,1), rgba(0,158,224,1));
-      background: no-repeat center center,linear-gradient(top,         rgba(255,255,255,1), rgba(0,158,224,1));
-      min-height: 99vh;
-    }
-    img { width: 80%;}
-    h1 {
-      color: blue;
-      font-size: 2.6em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-right: 333px;
-}
-    main a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.3em;
-      color: white;
-      text-decoration: none; 
-      text-shadow: 4px 4px 6px blue, 0px 0px 2px black;
-      font-weight: 520;
-      padding: 23px;
-      margin: 4px;
-      background: rgba(255,255,255,0.32);
-      margin-right: 100px;
-      margin-left: 100px;
-      border-radius: 8px;
-    }
-    main a:hover {
-      color: aqua;
-      background: rgba(255,255,255,0.5);
-    } 
-  </style>
-  <body>
-    <header>
-      <a href="https://freifunk-bodensee.net/">
-        <img title="bodensee.freifunk.net" alt="bodensee.freifunk.net" src="https://freifunk-bodensee.net/lib/tpl/dokuwiki-template/images/logo.svg"/>
-      </a>
-    </header>
-    <h1>{{ hostname }}</h1>
-    <a style="color: blue; ">{{ hostname }} ist einer der "Gateways" des Freifunk Bodensee Netz. Zu diesen Gateway bauen die Freifunk-Router eine FastD-VPN Verbindung auf um sich mit dem Freifunk Netz zu verbinden. Eine passende Firmware dazu kann beim Firmware-Download gefunden werden. Eine Liste mit unterstützen Routern gibt es bei uns im Wiki.<br/>Wenn du Fragen zu Freifunk oder zur Freifunk Bodensee Community hast oder dich gerne bei uns beteiligen willst, dann findest du verschiedene Kontaktm&ouml;glichkeiten auf unserer Startseite.</a>
-    <br/><br/>
-    <main>
-      <a title="Zur Startseite von Freifunk Bodensee." href="https://freifunk-bodensee.net/start.html">Freifunk Startseite</a>
-      <a title="Zum Freifunk Bodensee Wiki." href="https://freifunk-bodensee.net/doku.php?id=anleitungen:inhaltsverzeichnis">Zum Wiki</a>
-      <a title="Zum Meshviewer." href="https://vpn8.ffbsee.de/meshviewer/">Meshviewer</a>
-      <a title="Hier kann man die Firmware runterladen." href="https://software.ffbsee.de/firmware-wizard">Firmware Download</a>
-      <a title="Zu Github." href="https://github.com/ffbsee">Quellcode</a>
-    </main>
-    <a href="https://raw.githubusercontent.com/ffbsee/firmware/master/LICENSE" style="text-decoration: none; float: right; color: white;">Licence</a>
- </body>
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Modified for Freifunk Bodensee, Deployed and Updated by Ansible
+-->
+<html>
+	<head>
+		<title>{{ hostname }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <meta name="language" content="de">
+        <meta name="revisit-after" content="23 days">
+        <meta name="author" content="Freifunk Bodensee Community">
+        <meta name="publisher" content="Freifunk Bodensee Community">
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1>{{ hostname }}</h1>
+				<p>This is a gateway of the <a href="https://freifunk-bodensee.net">Freifunk Bodensee</a> community.
+                Here are the necessary central services such as DHCP and DNS resolver.
+                In addition, Freifunk routers connect via <a href="https://wiki.freifunk.net/Fastd">FastD</a> with
+                the {{ hostname }} and then direct their traffic to the Internet. <br />
+            Learn more:</p>
+        </header>
+        <ul class="lnk"><li> 
+          <a class="button" href="https://freifunk-bodensee.net/">News</a>
+        </li><li>
+            <a class="button" href="https://start.ffbsee.net/">internal Startpage *</a>
+        </li><li>
+            <a class="button" href="https://freifunk-bodensee.net/doku.php?id=anleitungen:inhaltsverzeichnis">Wiki</a>
+        </li><li>
+            <a class="button" href="https://gw01.ffbsee.net/meshviewer/index.html">Meshviewer</a>
+        </li><li>
+            <a class="button" href="https://meta.ffbsee.net/FFNodeList/liste.html">Node List</a>
+        </li></ul> 
+      
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://twitter.com/@FFBSee" class="icon fa-twitter" title="Twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/freifunk.bodensee" class="icon fa-facebook" title="Facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://webirc.hackint.org/#irc://irc.hackint.org/#ffbsee" class="icon fa-hashtag" title="IRC"><span class="label">IRC</span></a></li>
+					<li><a href="https://github.com/ffbsee/" class="icon fa-github" title="GitHub"><span class="label">GitHub</span></a></li>
+					<li><a href="https://forum.freifunk.net/c/community/freifunk-bodensee" class="icon fa-comments" title="Forum"><span class="label">Forum</span></a></li>
+					<li><a href="https://software.ffbsee.net" class="icon fa-download" title="Download Firmware"><span class="label">Download Firmware</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; FFBSee.</li><li>Design inspired by <a href="http://html5up.net">HTML5 UP</a>.</li>
+				</ul>
+			</footer>
+        <a style="text-decorationi: none; color: gray; font-size: 1.3em; margin-right: 10px; margin-left: auto;text-align: end;">* Only reachable inside the Freifunk Network.</a>
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
