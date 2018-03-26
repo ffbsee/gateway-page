@@ -24,10 +24,14 @@
 		<!-- Header -->
 			<header id="header">
 				<h1>{{ hostname }}</h1>
+{% if hostname == "meta.ffbsee.net" %}
+                <p>This is a Server inside the <a href="https://ffbsee.de/">Freifunk Bodensee</a> Network. Here are some useful internal Services like our monitoring tool icinga2, our <a href="https://meta.ffbsee.net/FFNodeList">Node List</a>, the Meshviewer, our Presentation and many more...<br/>
+{% else %}
 				<p>This is a gateway of the <a href="https://freifunk-bodensee.net">Freifunk Bodensee</a> community.
                 Here are the necessary central services such as DHCP and DNS resolver.
                 In addition, Freifunk routers connect via <a href="https://wiki.freifunk.net/Fastd">FastD</a> with
                 the {{ hostname }} and then direct their traffic to the Internet. <br />
+{% endif %}
             Learn more:</p>
         </header>
         <ul class="lnk"><li> 
